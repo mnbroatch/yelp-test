@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+    "rules": {
+      "no-underscore-dangle":["error",{"allow": ["_id"]}],
+      "no-param-reassign":[2, {
+        "props": false
+      }],
+      "new-cap": ["error", {"capIsNewExceptions":["Router"]}],
+    },
+    "globals": {
+      "angular": true
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    }
+}
+

@@ -1,0 +1,34 @@
+<h1></h1>
+
+
+
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <th>Thing Name</th>
+    </thead>
+    <colgroup>
+      <col style="width:80%">
+      <col style="width:20%">
+    </colgroup>  
+
+    <tr ng-repeat="thing in thingArray track by $index">
+      <td>
+        <a ui-sref="business({ id: thing.yelpId })">
+          {{ thing.name }}
+        </a>
+      </td>
+      <td>
+        <button class="delete-button btn btn-danger " ng-click="removeOneThing(thing)">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+
+
+  </tr>
+
+</table>
+
+</div>
+

@@ -1,0 +1,31 @@
+<h1>Business Details</h1>
+
+
+<div class="business-title-area">
+  <span class="business-title">
+    {{business.name}}:
+  </span>
+  {{thing.numFavorites}} Favorites
+</div>
+<div class="business-info-area well">
+  <span class="rating-text"> {{business.rating}} </span>
+  <img ng-src="{{business.rating_img_url_large}}" />
+
+  <div class="fav-button">
+    <button class="btn btn-success" ng-show="!(thing.users.indexOf(currentUser._id) > -1)" ng-click="addOneThing()">Favorite</button>
+    <button class="btn btn-success" ng-show="thing.users.indexOf(currentUser._id) > -1" ng-click="removeOneThing()">Remove Favorite</button>
+  </div>
+
+
+  <br>
+  Phone Number: {{business.phone}}
+  <br>
+  Address: {{business.location.display_address[0]}}
+  {{business.location.display_address[1]}}
+  {{business.location.display_address[2]}}
+
+
+
+</div>
+
+
